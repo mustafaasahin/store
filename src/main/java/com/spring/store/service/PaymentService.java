@@ -1,4 +1,4 @@
-package com.spring.store;
+package com.spring.store.service;
 
 public interface PaymentService {
 
