@@ -1,13 +1,24 @@
 package com.spring.store.entity;
 
+import jakarta.persistence.*;
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@AllArgsConstructor
+@Entity
+@Table(name = "User")
 @Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
-    private String name;
-    private String email;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false, unique = true)
+    private String email;
 }
