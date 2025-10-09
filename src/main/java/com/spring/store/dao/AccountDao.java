@@ -1,12 +1,12 @@
 package com.spring.store.dao;
 
-import com.spring.store.entity.User;
+import com.spring.store.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface UserDao extends JpaRepository<User, Long> {
-    Optional<User> findByEmail(String email);
+public interface AccountDao extends JpaRepository<Account, Long> {
+    Optional<Account> findByEmail(String email);
 }
